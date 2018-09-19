@@ -1,15 +1,12 @@
 import ply.lex as lex
 
-tokens = [ 'NAME','NUMBER','PLUS','MINUS','TIMES','DIVIDE', 'EQUALS' ]
+tokens = [ 'NAME','NUMBER','EQUALS' ]
 
-reserved = {'SUM' : 'plus', 'RES':'minus', 'MUL':'times', 'DIV':'divide'}
+reserved = {'SUM' : 'PLUS', 'RES':'MINUS', 'MUL':'TIMES', 'DIV':'DIVIDE'}
 
 tokens += reserved.values()
 t_ignore = ' \t'
-t_PLUS = r'\+'
-t_MINUS = r'-'
-t_TIMES = r'\*'
-t_DIVIDE = r'/'
+
 t_EQUALS = r':='
 
 
